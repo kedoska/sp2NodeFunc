@@ -38,36 +38,4 @@ In this case we are generating a function
 3. returning `recordsets` as a second callback param
 4. returning `outputs` as a third callback param
 
-```
-const sql = require('mssql')
-module.exports.dbo = {}
-/**
- * @function sp_GetCustomer
- * @param {String} user - varchar (len and precision: 100:100)
- * @param {String} password - varchar (len and precision: 100:100)
- * @param {Number} customer - int (len and precision: 4:10) OUTPUT
- * @param {Number} profile - int (len and precision: 4:10) OUTPUT
- * @param {Number} session - int (len and precision: 4:10) OUTPUT
- * @param done {function} callback(err, result, outputs)
- */
-module.exports.dbo.sp_GetCustomer = (user, password, customer, profile, session, casino, done) => {
-  const request = new sql.Request()
-    .input('user', sql.VarChar(100), user)
-    .input('password', sql.VarChar(100), password)
-    .output('customer', sql.Int, customer)
-    .output('profile', sql.Int, profile)
-    .output('session', sql.Int, session)
-  request.execute('dbo.sp_GetCustomer')
-    .then(x => {
-      const outputs = Object.keys(request.parameters).map(x => {
-        const param = {}
-        param[request.parameters[x].name] = request.parameters[x].value
-        return param
-      })
-      done(null, x, outputs)
-    })
-    .catch(err => {
-      done(err, null)
-    })
-}
-```
+<img src="https://cloud.githubusercontent.com/assets/11739105/20719998/b33d4f78-b62b-11e6-9e85-8732c09e7369.png" alt="example" />
