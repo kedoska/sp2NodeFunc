@@ -1,0 +1,12 @@
+{
+  "appName": "ProcToJS",
+  "user": "sa",
+  "password": "hahahah",
+  "server": "127.0.0.1",
+  "database": "example",
+  "pool": {
+    "max": 10,
+    "min": 0,
+    "idleTimeoutMillis": 30000
+  }
+}

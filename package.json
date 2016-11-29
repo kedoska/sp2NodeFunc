@@ -1,0 +1,20 @@
+{
+  "name": "sp2NodeFunc",
+  "version": "0.0.1",
+  "description": "Parser to map MSSQL Stored Procedure into Javascript functions (using node-mssql)",
+  "main": "index.js",
+  "scripts": {
+    "make_dbo": "node index.js dbo"
+  },
+  "keywords": [
+    "nodejs",
+    "TSQL",
+    "storedprocedures"
+  ],
+  "author": "Marco Casula <marco.casula@linux.org>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.1",
+    "mssql": "^3.3.0"
+  }
+}

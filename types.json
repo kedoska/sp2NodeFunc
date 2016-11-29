@@ -1,0 +1,20 @@
+{
+  "bit": {
+    "type": "Boolean",
+    "asString": false
+  },
+  "char": {"type": "String", "asString": true},
+  "datetime": {"type": "String", "asString": true},
+  "decimal": {"type": "Number", "asString": false},
+  "float": {"type": "Number", "asString": false},
+  "image": {"type": "Array", "asString": true},
+  "int": {"type": "Number", "asString": false},
+  "money": {"type": "Number", "asString": false},
+  "numeric": {"type": "Number", "asString": false},
+  "nvarchar": {"type": "String", "asString": true},
+  "smallint": {"type": "Number", "asString": false},
+  "text": {"type": "String", "asString": true},
+  "tinyint": {"type": "Number", "asString": false},
+  "uniqueidentifier": {"type": "String", "asString": true},
+  "varchar": {"type": "String", "asString": true}
+}
